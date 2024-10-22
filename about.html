@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Reformed Baptist Church</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        ul, ul.nav {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            color: inherit;
+        }
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            padding: 35px 100px 0;
+        }
+        header h2 span {
+            color: #bf0a30;
+        }
+        header ul.nav {
+            display: flex;
+        }
+        header ul.nav li {
+            margin: 0 15px;
+        }
+        header ul.nav li:first-child {
+            margin-left: 0;
+        }
+        header ul.nav li:last-child {
+            margin-right: 0;
+        }
+        @media(max-width:1000px) {
+            header {
+                padding: 20px 50px;
+            }
+        }
+        @media (max-width:700px) {
+            header {
+                flex-direction: column;
+            }
+            header h2 {
+                margin-bottom: 15px;
+            }
+            header ul.nav li {
+                margin: 0 7px;
+            }
+            .about-right p {
+                display: none;
+            }
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 110px 100px;
+            color: #000;
+        }
+        @media (max-width:1000px) {
+            section {
+                padding: 100px 50px;
+            }
+        }
+        @media (max-width:600px) {
+            section {
+                padding: 125px 30px;
+            }
+        }
+        section p {
+            max-width: 800px;
+            text-align: center;
+            margin-bottom: 35px;
+            padding: 0 20px;
+            line-height: 2;
+        }
+        .banner-area {
+            position: relative;
+            justify-content: center;
+            min-height: 100vh;
+            color: #fff;
+            text-align: center;
+        }
+        .banner-area .banner-img {
+            background-image: url(images/a1.jpeg);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            z-index: -1;
+            background-position: center center;
+        }
+        .banner-area .banner-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: .7;
+        }
+        .banner-area h1 {
+            margin-bottom: 15px;
+            font-size: 65px;
+            text-transform: uppercase;
+        }
+        .banner-area h1 span {
+            color: #bf0a30;
+        }
+        .banner-area h3 {
+            font-size: 25px;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+        .banner-area a.banner-btn {
+            padding: 15px 35px;
+            background: #bf0a30;
+            text-transform: uppercase;
+        }
+        @media (max-width:800px) {
+            .banner-area {
+                min-height: 600px;
+            }
+            .banner-area h1 {
+                font-size: 27px;
+            }
+            .banner-area h3 {
+                font-size: 20px;
+            }
+            .banner-area a.banner-btn {
+                padding: 8px 20px;
+            }
+        }
+        ul.about-content {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .about-content li {
+            padding: 20px;
+            height: 500px;
+            background-clip: content-box;
+            background-size: cover;
+            background-position: center;
+        }
+        .about-left {
+            flex-basis: 30%;
+            background-image: url(images/2.jpg);
+        }
+        .about-right {
+            flex-basis: 70%;
+        }
+        .about-right h2 {
+            font-size: 35px;
+        }
+        .about-area p {
+            max-width: 800px;
+            margin-bottom: 35px;
+            line-height: 1.5;
+            text-align: left;
+            padding-left: 0;
+        }
+        .section-title {
+            text-transform: uppercase;
+            font-size: 50px;
+            margin-bottom: 5%;
+        }
+        .section-title span {
+            color: #bf0a30;
+        }
+        .about-right h2 {
+            margin-bottom: 3%;
+        }
+        .about-btn {
+            padding: 15px 35px;
+            background: #bf0a30;
+            border-radius: 50px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        @media (max-width: 1000px) {
+            .section-title {
+                font-size: 35px;
+            }
+            .about-left, .about-right {
+                flex-basis: 100%;
+            }
+            .about-content li {
+                padding: 8px;
+            }
+        }
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            background-color: #000;
+            padding: 60px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="banner-area">
+        <div class="banner-img"></div>
+        <h1>Welcome to <span>First Reformed Baptist Church</span></h1>
+        <h3>Freetown, Sierra Leone</h3>
+        <a class="banner-btn" href="https://www.youtube.com/@FirstReformedBaptistChurch">Learn More</a>
+    </section>
+
+    <section id="about">
+        <div class="section-title">
+            <h2>About Us</h2>
+        </div>
+        <ul class="about-content">
+            <li class="about-left"></li>
+            <li class="about-right">
+                <h2>Our Mission</h2>
+                <p>The First Reformed Baptist Church in Freetown, Sierra Leone, is dedicated to preaching the Gospel of Jesus Christ and fostering spiritual growth within our community. Led by Pastor Emmanuel Komba, we strive to provide a welcoming environment for worship and fellowship.</p>
+                <p>We believe in the power of prayer, the authority of Scripture, and the importance of community service. Our church seeks to spread hope and love through various outreach programs and activities.</p>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 First Reformed Baptist Church | Freetown, Sierra Leone</p>
+    </footer>
+</body>
+</html>
